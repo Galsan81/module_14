@@ -14,8 +14,8 @@ for i in range(10):
     f'{(i+1)*10}', f'{(i+1)*1000}'))
 
 for i in range(10):
-    cursor.execute("UPDATE Users SET balance = ? WHERE id % 2 == 0", (500,))
-    cursor.execute("UPDATE Users SET balance = ? WHERE id % 2 == 1", (1000,))
+    cursor.execute("UPDATE Users SET balance = ? WHERE id % 2 == 0", (1000,))
+    cursor.execute("UPDATE Users SET balance = ? WHERE id % 2 == 1", (500,))
 
 for i in range(10):
     cursor.execute("DELETE FROM Users WHERE (id+2)%3==0")
